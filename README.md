@@ -102,4 +102,4 @@ The `app.py` is a script for flask application to deploy the model locally and t
 2. Home page displays the all time top 50 books.
 3. You can search book by book title or keyword from home page.
 4. Or you can also use advanced search option (api: `http://localhost:5000/advanced-search`) for particular age.
-   ![advanced-search-page](https://github.com/madhuri-15/book-recommendation/blob/main/images/advanced-search.png)
+   
