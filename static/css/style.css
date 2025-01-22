@@ -1,0 +1,183 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.main-container{
+    font-family: "Open-sans", sans-serif;
+}
+
+header{
+    padding: 10px;
+}
+
+header .row-1{
+    align-items: center;
+    justify-content: center;
+}
+
+.row-1 ul{
+    list-style: none;
+    display: flex;
+    padding: 2px 12px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+ul li a:hover{
+    text-decoration:underline;
+}
+
+.row-2{
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.row-2 form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form input[type="text"]{
+    outline: none;
+    border: 1px solid #ccc;
+    width: 600px;
+    height: 38px;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #2c2929;
+    box-shadow: 1px 1px 2px #ccc;
+}
+
+form input[type="submit"]{
+    outline: none;
+    border: none;
+    padding: 8px;
+    font-size: 1em;
+    border-radius: 6px;
+    font-weight: 500;
+    color:#62048d;
+    border: 2px solid #bc42f5;
+    background-color: #ab73bb62;
+    box-shadow: 1px 1px 2px #ab73bb62;
+}
+
+form input[type="submit"]:hover{
+    background-color: #fafafa;
+    box-shadow: 1px 1px 0px #62048d;
+
+}
+
+.card-container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.label p{
+    font-size: 0.95em;
+    border-bottom: 1px solid #cecece;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #555;
+}
+
+.popular-books{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 10px;
+}
+
+.result{
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+}
+
+.card{
+    border-radius: 8px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.row{
+    display:flex;
+}
+
+.card-img{
+    margin: 10px;
+}
+
+.card-body{
+    margin: 10px;
+}
+
+.card-book-title{
+    font-size: 1.1em;
+}
+
+.card-book-author{
+    font-size: 0.93em;
+    color: #2c2929;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-weight: 600;
+    color: #2c2929;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+    color: #000;
+}
+
+form.advanced-search{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form input[type="number"]{
+    outline: none;
+    border: 1px solid #ccc;
+    width: auto;
+    height: 38px;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    margin-right: 12px;
+    font-size: 1em;
+    color: #2c2929;
+    box-shadow: 1px 1px 2px #ccc;
+}

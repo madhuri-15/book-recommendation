@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- link to CSS -->
+        <link rel="stylesheet" href="{{  url_for('static', filename='css/style.css') }}">
+
+        <title>Book Recommendation Application</title>
+    </head>
+    <body>
+        <div class="main-container">
+            <header>
+                <div class="row-1">
+                    <ul>
+                        <li><b>BOOKLY</b> <span class='sm-txt' style=font-size:14px;color:#666;></span></li>
+                        <li><a href="{{ url_for('index') }}">Top 50</a></li>
+                    </ul>
+                </div>
+                <div class="row-2">
+                    <form action="{{ url_for('search') }}" method='post'>
+                        <div class="advanced-search">
+                            <input type="text" name="search_text" required minlength="4"  maxlength="120" placeholder="Search books"/>
+                            <input id="age" type="number" name="age" min="6" max="100" value=None placeholder="Age"/>
+                        </div>
+                        <input type="submit" value="Find Your Perfect Book"/>
+                    </form>
+                </div>
+            </header>
+
+            <div class="result">
+                {% if books %}
+                        {% for idx, book in books.items() %}
+                            <div class="card">
+                                <div class="row">
+                                    <div>
+                                        <img src="{{ book['image_url_l'] }}" class="card-img" width="150" height="220">
+                                    </div>
+                                
+                                    <div class="card-body">
+                                        <h5 class="card-book-title">{{ book['book_title']| title }}</h5>
+                                        <p class="card-book-author">by {{ book['book_author']| title }}</p>
+                                        <p class="book-votes">Total votes:  {{ book['n_votes'] }}</p>
+                                        <p class="book-ratings">Rating: {{ book['weighted_rating'] }}/10</p>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                {% else %}
+                    <p>No Book Found! </p>
+                {% endif %}
+            </div>
+
+        </div>
+
+    </body>
+</html>
+
+
+

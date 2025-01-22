@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- link to CSS -->
+        <link rel="stylesheet" href="{{  url_for('static', filename='css/style.css') }}">
+        <title>Book Recommendation Application</title>
+    </head>
+    <body>
+        <div class="main-container">
+            <header>
+                <div class="row-1">
+                    <ul>
+                        <li><b>BOOKS</b> <span class='sm-txt' style=font-size:14px;color:#666;></span></li>
+                        <li><a href="{{ url_for('search') }}">advanced-search</a></li>
+                    </ul>
+                </div>
+                <div class="row-2">
+                    <form action="{{ url_for('search') }}" method='post'>
+                        <input type="text" name="search_text" required minlength="4"  maxlenght="120" placeholder="Search books"/>
+                        <input type="submit" value="Search books"/>
+                    </form>
+                    
+                </div>
+            </header>
+
+            <div class="card-container">
+                <div class="label">
+                    <p><b>POPULAR BOOKS</b></p>
+                </div>
+    
+                <div class="popular-books">
+                    {% if books %}
+                        {% for idx, book in books.items() %}
+                            <div>
+                                <img src="{{ book['image_url_l'] }}" width="210" height="280">
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <p>No Book Found! </p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
