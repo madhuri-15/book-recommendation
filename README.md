@@ -44,9 +44,8 @@ Data-cleaning notebook can be found here: [data-cleaning.ipynb](https://github.c
 ![line-chart](https://github.com/madhuri-15/book-recommendation/blob/main/images/user_demographics_analysis.jpeg)
 
 - Calculate the weighted average ratings for each book by considering only books with minimum 30 votes to find popular books.
-![weighted-average-impact](https://github.com/madhuri-15/book-recommendation/blob/main/images/weighted_rating_impact.png)
 
-Recommendation model building notebook can be found here: [book-recommendation-system.ipynb](https://github.com/madhuri-15/book-recommendation/blob/main/notebooks/book-recommendation-system.ipynb)
+![weighted-average-impact](https://github.com/madhuri-15/book-recommendation/blob/main/images/weighted_rating_impact.png)
 
 ### Model Building
 We have a large amount of user data with book rating. So, we use collabrative filtering approach to recommed books based on similar liking between the users.
@@ -56,6 +55,8 @@ We consider users who voted more than 120 books and books with more than 50 vote
 - **Approach 1: Simple Search Keyword**: Book recommendation by simply searching similar keywords in data.
 - **Approach 2: Pearson's Correlation**: Recommendations using pearson's correlations.
 - **Approach 3: Cosine Similarity**: Item-based collaborative filtering using cosine similarity.
+
+Recommendation model building notebook can be found here: [book-recommendation-system.ipynb](https://github.com/madhuri-15/book-recommendation/blob/main/notebooks/book-recommendation-system.ipynb)
 
 ### Model Evaluation
 
